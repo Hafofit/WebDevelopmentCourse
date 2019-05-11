@@ -1,0 +1,200 @@
+/*fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Rubik:400,500,700');
+/*body includes direction and bg color*/
+body {
+    direction: rtl;
+    background-color: #faf5f3;
+}
+/*to put everything in the middle*/
+#container {
+    margin: 0 auto;
+    width: 960px;
+  
+}
+/*logo id includes the main banner img, width and height of the img*/
+#logo {
+    background-image:url(../images/melogo.png);
+    background-repeat: no-repeat;
+    width: 510px;
+    height: 450px;
+    margin: 0 auto;
+    display: block;
+}
+/*in my original design I knew there going to be only one list in the entire website, so i didnt give it an ID. 
+    in a real website with a lot of links I wouldnt do something like that. 
+    this gives the color, padding/margin font and weight of the nav links
+*/
+/*
+    I tried to make the animation to be clickable outside the text but I failed. I made this animation on my own [no tutorial or generator] so i would like to know
+    how to make it work for the entire click?
+    I did display block and even tried to give it width/height and it didnt work.
+*/
+nav ul li, a {
+    display: inline-block;
+    padding: 10px;
+    height: 25px;
+    color: #005833;
+    font-size: 17pt;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+/*part of the nav animation that changes the font color*/
+    a:hover,a::after,a:active, .current a{
+        color: #ee2f75;
+    }
+    /*the part that creates the moving line*/
+.animation {
+    transition: border-color 0.3s ease-in;
+    border-bottom: 3px solid transparent;
+}
+    /*the part that creates the moving line*/
+    .animation:hover {
+        border-color: #ee2f75;
+        margin: 0px;
+    }
+    /*I wanted the entire content to be centered. and every h to have a diffrient font size. so i had to split them
+        I am not sure if it was the right way and might be waste of code lines.. but i just couldnt figure out a way to group them all and still have unique font size for each
+    */
+header{
+    text-align: center;
+}
+/*margin to space from the top*/
+    header h1 {
+        font-size: 38pt;
+        color: #ee2f75;
+        margin: 45px 0 40px 0;
+        font-family: 'Rubik', sans-serif;
+    }
+    /*added padding and margin to space between the elements*/
+    header h2, h3 {
+        margin: 10px 0 10px 0;
+        padding: 5px;
+        font-size: 14pt;
+        font-family: 'Arimo', sans-serif;
+    }
+    /*just putting the footer where he belongs
+        giving him line height to space a little instead of writing another footer p : padding and
+    */
+    #footerInfo{
+        text-align:center;
+        margin-top: 30px;
+    line-height: 1.6;
+    }
+
+/*every work is covered inside a countainer so it would be easy for me to make them look the same and move them as one group*/
+#workCont {
+    width: 900px;
+    height: 1100px;
+    background-color: white;
+    margin-top: 50px;
+    border: dotted 4px #86c5ab;
+    padding: 15px;
+}
+/*changing the font weight/height inside of the p*/
+#workCont p {
+    line-height: 1.6;
+    font-weight: bold;
+    font-size: 15pt;
+}
+/*giving all the imgs pointer cursor to make it look clickable*/
+#workCont img{
+    cursor: pointer;
+}
+/*to make it look a little bit more in the center. i tried to do a global class to center all of the imgs but because they dont have the same size, it didnt work.
+    I know theres a html resize tag but it didnt work for me.
+*/
+/*fix for overlay animation*/
+#groot {
+position: relative;
+left: 20px;
+}
+/*fix for overlay animation*/
+#talya{
+    position: relative;
+    bottom: 10px;
+    width: 310px;
+    height: 470px;
+    margin: 5px 5px;
+    position: relative;
+    right: 130px;
+    display: block;
+
+}
+/*fix for overlay animation*/
+#santa{
+    display: block;
+    width: 580px;
+}
+/*the class of the text itself inside of workcont. so i can move and contorl the text as a group and control how much it takes from the actual width of the page
+     now that i think of it.. might should have maybe done it inside of workcont itself.. 
+*/
+.Info {
+    text-align: center;
+    margin: 20px;
+    width: 620px;
+    position: relative;
+    margin-right: 135px;
+    color: #004629;
+}
+/*giving the h2 unique look*/
+ .Info h2 {
+            color: #ed1b71;
+            font-size: 21pt;
+            margin-top: 35px;
+        }
+ /*giving some space between the text lines*/
+ .Info p{
+        font-size: 12pt;
+        padding: 15px;
+        text-align:center;
+    }
+ /*using a span tag, i make point of focus bold to attack the viewer's eye*/
+.bold {
+    font-weight: bold;
+    margin: 5px;
+    color: #008951;
+}
+/*giving the h3 unique look*/
+.Info h3 {
+    padding: 5px;
+    font-size: 13pt;
+    color: #008951
+}
+/*just a decoration. took a div and gave him some attributes to make it look like a nice line*/
+.line {
+    width: 215px;
+    height: 8px;
+    background-color: #f2d1bf;
+    display: block;
+    position:relative;
+    right: 190px;
+    margin: 10px 10px;
+}
+
+figure{
+    position: relative;
+    bottom: 190px;
+    right: 320px;
+}
+
+/*overlay animation*/
+.overlay {
+    position: relative;
+    bottom: 70px;
+    background-color: deeppink;
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.2s ease-in;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+}
+/*overlay animation*/
+#talya:hover .overlay, #groot:hover .overlay, #santa:hover .overlay {
+    opacity: 1;
+}
