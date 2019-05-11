@@ -77,7 +77,7 @@ header{
     /*just putting the footer where he belongs
         giving him line height to space a little instead of writing another footer p : padding and
     */
-    #footerInfo{
+#footerInfo{
         text-align:center;
         margin-top: 30px;
     line-height: 1.6;
@@ -172,7 +172,7 @@ left: 20px;
     right: 190px;
     margin: 10px 10px;
 }
-
+/*the videos*/
 figure{
     position: relative;
     bottom: 190px;
@@ -183,7 +183,7 @@ figure{
 .overlay {
     position: relative;
     bottom: 70px;
-    background-color: deeppink;
+    background-color: #ee2f75;
     color: #f1f1f1;
     width: 100%;
     transition: 0.2s ease-in;
@@ -194,7 +194,7 @@ figure{
     text-align: center;
     font-family: 'Arimo', sans-serif;
 }
-/*overlay animation*/
+/*overlay animation opacity*/
 #talya:hover .overlay, #groot:hover .overlay, #santa:hover .overlay {
     opacity: 1;
 }
